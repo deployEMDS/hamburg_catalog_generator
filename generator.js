@@ -418,7 +418,7 @@ async function generateURLs(options) {
   // Extract the @iot.selfLink from each datastream
   const datastreamURLs = datastreams.map(ds => ds["@iot.selfLink"]);
 
-  return `${datastreamURLs.join(", ")}`;
+  return JSON.stringify(datastreamURLs);
 }
 
 // ---- CLI Setup ----

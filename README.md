@@ -70,7 +70,7 @@ These options set metadata references; the tool only writes output locally and d
 
 ## Export datastream URLs
 
-To output a comma-separated list of the matching datastream URLs, instead of a DCAT catalog, use the following command
+To output a JSON list of the matching datastream URLs, instead of a DCAT catalog, use the following command
 
 ```sh
 node hamburg_catalog_generator.js urls --time-interval P1D > datastream-urls.txt
