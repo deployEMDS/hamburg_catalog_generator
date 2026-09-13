@@ -469,6 +469,22 @@ program
     }
   });
 
+program
+  .command("collection")
+  .description("Generate SensorThings API Collection URL for Hamburg traffic data according to the provided parameters")
+  .option("-t, --time-interval <interval>", "Time interval (P15M, P1H, P1D)", "P1D")
+  .action(async (options) => {
+    try {
+      const timeInterval = options.timeInterval || "P1D";
+      const url = generateSensorThingsURL(timeInterval);
+      console.log(url);
+    } catch (err) {
+      console.error("URL generation failed:");
+      console.error(err.message);
+      process.exit(1);
+    }
+  });
+
 program.parse(process.argv);
 
 // Show help if no command is provided
