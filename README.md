@@ -77,3 +77,14 @@ node hamburg_catalog_generator.js urls --time-interval P1D > datastream-urls.txt
 ```
 
 The `urls` command supports `-t, --time-interval <interval>` with the same default of `P1D`. 
+
+
+## Export datastream Collection
+
+To output a JSON list of the matching datastream URLs, instead of a DCAT catalog, use the following command
+
+```sh
+node hamburg_catalog_generator.js collection --time-interval P1D > datastream-urls.txt
+```
+
+The `urls` command supports `-t, --time-interval <interval>` with the same default of `P1D`. 
